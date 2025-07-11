@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;700&display=swap');
+
+html {
+  font-size: 18px; /* Standard base for rem units */
+}
+body {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  background: linear-gradient(120deg, #e8f5e9 0%, #b2dfdb 100%);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  font-size: 1.15rem;
+}
+
+.hero-section {
+  min-height: 80vh;
+  background: linear-gradient(120deg, #e8f5e9 0%, #b2dfdb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%231e8e3e" fill-opacity="0.12" d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,176C840,139,960,85,1080,80C1200,75,1320,117,1380,138.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  right: 5vw;
+  top: 10vh;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at 60% 40%, #38f9d7 0%, #43e97b 100%);
+  opacity: 0.18;
+  filter: blur(32px);
+  border-radius: 50%;
+  animation: floatShape 7s ease-in-out infinite alternate;
+  z-index: 1;
+}
+@keyframes floatShape {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.08); }
+}
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(8px) saturate(120%);
+  background: rgba(255,255,255,0.18);
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 48px rgba(30,180,90,0.10);
+  padding: 3rem 2rem 2.5rem 2rem;
+  max-width: 650px;
+}
+.hero-logo {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(30,180,90,0.13);
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(2px);
+}
+.hero-section h1 {
+  color: #1e8e3e;
+  font-weight: 900;
+  font-size: 2.8rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 16px rgba(30,180,90,0.08);
+}
+.hero-section .lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: #222;
+  text-shadow: 0 1px 8px rgba(30,180,90,0.06);
+}
+.hero-section .btn-success {
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 2rem;
+  padding: 0.9rem 2.2rem;
+  box-shadow: 0 4px 24px rgba(30,180,90,0.13);
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  letter-spacing: 0.04em;
+}
+.hero-section .btn-success:hover, .hero-section .btn-success:focus {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 12px 32px rgba(30,180,90,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+section h2, section h3, .fw-bold {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e8e3e;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 16px rgba(30,180,90,0.08);
+}
+.about-section h2, .services-section h2, .location-section h3 {
+  font-size: 2.2rem;
+}
+.about-section p, .services-section p, .location-section p, .book-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e8e3e;
+}
+.card-text, .list-unstyled li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card, .about-section .card, .services-section .card, .location-section .card {
+  border-radius: 1.5rem !important;
+  background: rgba(255,255,255,0.22) !important;
+  box-shadow: 0 8px 32px rgba(30,180,90,0.10);
+  backdrop-filter: blur(6px) saturate(120%);
+  border: 1px solid rgba(30,180,90,0.08) !important;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.2s;
+  padding: 1.5rem 1rem;
+}
+.card:hover, .about-section .card:hover, .services-section .card:hover, .location-section .card:hover {
+  box-shadow: 0 16px 48px rgba(30,180,90,0.16);
+  border: 1.5px solid #38f9d7 !important;
+  transform: translateY(-6px) scale(1.04);
+}
+.services-section .card-img-top {
+  background: linear-gradient(135deg, #e8f5e9 0%, #b2dfdb 100%);
+  border-radius: 50%;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,180,90,0.08);
+}
+
+.location-section .card {
+  border-radius: 2rem;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 8px 32px rgba(30,180,90,0.10);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+.location-section h3 {
+  color: #1e8e3e;
+  font-weight: 900;
+}
+.location-section i {
+  color: #1e8e3e;
+}
+
+.pricing-section {
+  background: #f4f8f6;
+}
+.pricing-section h2 {
+  color: #1e8e3e;
+  font-weight: 700;
+}
+.pricing-card {
+  border-radius: 1.5rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  background: #fff;
+}
+.pricing-card:hover {
+  box-shadow: 0 8px 32px rgba(30,180,90,0.12);
+  transform: translateY(-6px) scale(1.03);
+}
+.pricing-card .card-header {
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: #e8f5e9;
+}
+.pricing-card .card-header.bg-success {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+.pricing-card .btn {
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.book-section {
+  background: linear-gradient(120deg, #e8f5e9 0%, #f8f9fa 100%);
+  border-radius: 2.5rem;
+  margin: 4rem auto 0 auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(30,180,90,0.10);
+  padding: 3rem 2rem 2.5rem 2rem;
+  backdrop-filter: blur(8px) saturate(120%);
+}
+.book-section h2 {
+  color: #1e8e3e;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+.book-section .btn-success {
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 2rem;
+  padding: 0.9rem 2.2rem;
+  box-shadow: 0 4px 24px rgba(30,180,90,0.13);
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  letter-spacing: 0.04em;
+}
+.book-section .btn-success:hover, .book-section .btn-success:focus {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 12px 32px rgba(30,180,90,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.footer-distributed {
+  background: rgba(30,142,62,0.98) !important;
+  color: #fff;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  box-shadow: 0 -2px 24px rgba(30,180,90,0.13);
+  margin-top: 4rem;
+  font-size: 1.1rem;
+}
+.footer-distributed a {
+  color: #fff;
+  opacity: 0.88;
+  transition: opacity 0.2s, text-shadow 0.2s;
+  text-shadow: 0 1px 8px rgba(30,180,90,0.10);
+}
+.footer-distributed a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-shadow: 0 2px 16px #38f9d7;
+}
+.footer-distributed .fa-lg {
+  font-size: 1.7rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991px) {
+  .about-section .row, .location-section .row {
+    flex-direction: column-reverse;
+  }
+  .about-section img, .location-section iframe {
+    margin-bottom: 2rem;
+  }
+  .hero-section, .about-section, .services-section, .location-section, .book-section {
+    padding: 2rem 0 !important;
+  }
+  .hero-section h1, .display-4, h1 { font-size: 2rem; }
+  section h2, .fw-bold, h2 { font-size: 1.3rem; }
+  .lead, .about-section p, .services-section p, .location-section p, .book-section p, .fs-5 { font-size: 1rem; }
+  .hero-section > .container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 767px) {
+  html { font-size: 15px; }
+  .hero-section, .about-section, .services-section, .location-section, .book-section {
+    padding: 1.2rem 0 !important;
+  }
+  .hero-section h1, .display-4, h1 { font-size: 1.3rem; }
+  section h2, .fw-bold, h2 { font-size: 1.1rem; }
+  .lead, .about-section p, .services-section p, .location-section p, .book-section p, .fs-5 { font-size: 0.95rem; }
+  .card, .about-section .card, .services-section .card, .location-section .card {
+    padding: 1rem 0.5rem;
+  }
+  .btn-success, .hero-section .btn-success, .book-section .btn-success {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+  .hero-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+} 
